@@ -1,0 +1,1183 @@
+{
+    "building_name": "七号公寓空调",
+    "building_id": "4",
+    "update_time": "2025-02-20 18:43:57",
+    "rooms": [
+        {
+            "room_id": "1-4--8-105",
+            "room_name": "105",
+            "quantity": "86.0",
+            "update_time": "2025-02-20 18:27:49"
+        },
+        {
+            "room_id": "1-4--8-106",
+            "room_name": "106",
+            "quantity": "50.80",
+            "update_time": "2025-02-20 18:27:54"
+        },
+        {
+            "room_id": "1-4--8-107",
+            "room_name": "107",
+            "quantity": "137.0",
+            "update_time": "2025-02-20 18:27:59"
+        },
+        {
+            "room_id": "1-4--8-108",
+            "room_name": "108",
+            "quantity": "113.50",
+            "update_time": "2025-02-20 18:28:03"
+        },
+        {
+            "room_id": "1-4--8-109",
+            "room_name": "109",
+            "quantity": "0.0",
+            "update_time": "2025-02-20 18:28:08"
+        },
+        {
+            "room_id": "1-4--8-111",
+            "room_name": "111",
+            "quantity": "13.50",
+            "update_time": "2025-02-20 18:28:13"
+        },
+        {
+            "room_id": "1-4--8-113",
+            "room_name": "113",
+            "quantity": "95.60",
+            "update_time": "2025-02-20 18:28:18"
+        },
+        {
+            "room_id": "1-4--8-114",
+            "room_name": "114",
+            "quantity": "-446.0",
+            "update_time": "2025-02-20 18:28:23"
+        },
+        {
+            "room_id": "1-4--8-115",
+            "room_name": "115",
+            "quantity": "0.0",
+            "update_time": "2025-02-20 18:28:28"
+        },
+        {
+            "room_id": "1-4--8-116",
+            "room_name": "116",
+            "quantity": "10.70",
+            "update_time": "2025-02-20 18:28:33"
+        },
+        {
+            "room_id": "1-4--8-117",
+            "room_name": "117",
+            "quantity": "32.10",
+            "update_time": "2025-02-20 18:28:38"
+        },
+        {
+            "room_id": "1-4--8-118",
+            "room_name": "118",
+            "quantity": "79.50",
+            "update_time": "2025-02-20 18:28:43"
+        },
+        {
+            "room_id": "1-4--8-119",
+            "room_name": "119",
+            "quantity": "24.50",
+            "update_time": "2025-02-20 18:28:48"
+        },
+        {
+            "room_id": "1-4--8-120",
+            "room_name": "120",
+            "quantity": "81.50",
+            "update_time": "2025-02-20 18:28:52"
+        },
+        {
+            "room_id": "1-4--8-121",
+            "room_name": "121",
+            "quantity": "3.0",
+            "update_time": "2025-02-20 18:28:57"
+        },
+        {
+            "room_id": "1-4--8-122",
+            "room_name": "122",
+            "quantity": "0.0",
+            "update_time": "2025-02-20 18:29:02"
+        },
+        {
+            "room_id": "1-4--8-123",
+            "room_name": "123",
+            "quantity": "84.70",
+            "update_time": "2025-02-20 18:29:07"
+        },
+        {
+            "room_id": "1-4--8-124",
+            "room_name": "124",
+            "quantity": "33.80",
+            "update_time": "2025-02-20 18:29:11"
+        },
+        {
+            "room_id": "1-4--8-125",
+            "room_name": "125",
+            "quantity": "60.60",
+            "update_time": "2025-02-20 18:29:16"
+        },
+        {
+            "room_id": "1-4--8-126",
+            "room_name": "126",
+            "quantity": "102.0",
+            "update_time": "2025-02-20 18:29:21"
+        },
+        {
+            "room_id": "1-4--8-127",
+            "room_name": "127",
+            "quantity": "0.0",
+            "update_time": "2025-02-20 18:29:26"
+        },
+        {
+            "room_id": "1-4--8-128",
+            "room_name": "128",
+            "quantity": "40.50",
+            "update_time": "2025-02-20 18:29:31"
+        },
+        {
+            "room_id": "1-4--8-129",
+            "room_name": "129",
+            "quantity": "0.0",
+            "update_time": "2025-02-20 18:29:36"
+        },
+        {
+            "room_id": "1-4--8-130",
+            "room_name": "130",
+            "quantity": "0.0",
+            "update_time": "2025-02-20 18:29:40"
+        },
+        {
+            "room_id": "1-4--8-133",
+            "room_name": "133",
+            "quantity": "113.10",
+            "update_time": "2025-02-20 18:29:45"
+        },
+        {
+            "room_id": "1-4--8-134",
+            "room_name": "134",
+            "quantity": "99.40",
+            "update_time": "2025-02-20 18:29:50"
+        },
+        {
+            "room_id": "1-4--8-201",
+            "room_name": "201",
+            "quantity": "101.70",
+            "update_time": "2025-02-20 18:29:55"
+        },
+        {
+            "room_id": "1-4--8-202",
+            "room_name": "202",
+            "quantity": "33.30",
+            "update_time": "2025-02-20 18:30:00"
+        },
+        {
+            "room_id": "1-4--8-203",
+            "room_name": "203",
+            "quantity": "54.90",
+            "update_time": "2025-02-20 18:30:05"
+        },
+        {
+            "room_id": "1-4--8-204",
+            "room_name": "204",
+            "quantity": "194.40",
+            "update_time": "2025-02-20 18:30:10"
+        },
+        {
+            "room_id": "1-4--8-205",
+            "room_name": "205",
+            "quantity": "78.80",
+            "update_time": "2025-02-20 18:30:16"
+        },
+        {
+            "room_id": "1-4--8-206",
+            "room_name": "206",
+            "quantity": "87.90",
+            "update_time": "2025-02-20 18:30:21"
+        },
+        {
+            "room_id": "1-4--8-207",
+            "room_name": "207",
+            "quantity": "126.70",
+            "update_time": "2025-02-20 18:30:26"
+        },
+        {
+            "room_id": "1-4--8-208",
+            "room_name": "208",
+            "quantity": "77.20",
+            "update_time": "2025-02-20 18:30:31"
+        },
+        {
+            "room_id": "1-4--8-209",
+            "room_name": "209",
+            "quantity": "0.0",
+            "update_time": "2025-02-20 18:30:36"
+        },
+        {
+            "room_id": "1-4--8-210",
+            "room_name": "210",
+            "quantity": "260.90",
+            "update_time": "2025-02-20 18:30:41"
+        },
+        {
+            "room_id": "1-4--8-211",
+            "room_name": "211",
+            "quantity": "84.0",
+            "update_time": "2025-02-20 18:30:46"
+        },
+        {
+            "room_id": "1-4--8-212",
+            "room_name": "212",
+            "quantity": "5.30",
+            "update_time": "2025-02-20 18:30:50"
+        },
+        {
+            "room_id": "1-4--8-213",
+            "room_name": "213",
+            "quantity": "45.40",
+            "update_time": "2025-02-20 18:30:56"
+        },
+        {
+            "room_id": "1-4--8-214",
+            "room_name": "214",
+            "quantity": "0.0",
+            "update_time": "2025-02-20 18:31:00"
+        },
+        {
+            "room_id": "1-4--8-215",
+            "room_name": "215",
+            "quantity": "8.80",
+            "update_time": "2025-02-20 18:31:05"
+        },
+        {
+            "room_id": "1-4--8-216",
+            "room_name": "216",
+            "quantity": "130.60",
+            "update_time": "2025-02-20 18:31:10"
+        },
+        {
+            "room_id": "1-4--8-217",
+            "room_name": "217",
+            "quantity": "85.50",
+            "update_time": "2025-02-20 18:31:15"
+        },
+        {
+            "room_id": "1-4--8-218",
+            "room_name": "218",
+            "quantity": "0.0",
+            "update_time": "2025-02-20 18:31:20"
+        },
+        {
+            "room_id": "1-4--8-219",
+            "room_name": "219",
+            "quantity": "111.0",
+            "update_time": "2025-02-20 18:31:24"
+        },
+        {
+            "room_id": "1-4--8-220",
+            "room_name": "220",
+            "quantity": "134.60",
+            "update_time": "2025-02-20 18:31:30"
+        },
+        {
+            "room_id": "1-4--8-221",
+            "room_name": "221",
+            "quantity": "10.90",
+            "update_time": "2025-02-20 18:31:35"
+        },
+        {
+            "room_id": "1-4--8-222",
+            "room_name": "222",
+            "quantity": "96.10",
+            "update_time": "2025-02-20 18:31:40"
+        },
+        {
+            "room_id": "1-4--8-223",
+            "room_name": "223",
+            "quantity": "374.10",
+            "update_time": "2025-02-20 18:31:45"
+        },
+        {
+            "room_id": "1-4--8-224",
+            "room_name": "224",
+            "quantity": "77.80",
+            "update_time": "2025-02-20 18:31:50"
+        },
+        {
+            "room_id": "1-4--8-225",
+            "room_name": "225",
+            "quantity": "0.0",
+            "update_time": "2025-02-20 18:31:55"
+        },
+        {
+            "room_id": "1-4--8-226",
+            "room_name": "226",
+            "quantity": "52.70",
+            "update_time": "2025-02-20 18:32:00"
+        },
+        {
+            "room_id": "1-4--8-227",
+            "room_name": "227",
+            "quantity": "111.80",
+            "update_time": "2025-02-20 18:32:04"
+        },
+        {
+            "room_id": "1-4--8-228",
+            "room_name": "228",
+            "quantity": "61.0",
+            "update_time": "2025-02-20 18:32:09"
+        },
+        {
+            "room_id": "1-4--8-229",
+            "room_name": "229",
+            "quantity": "0.0",
+            "update_time": "2025-02-20 18:32:14"
+        },
+        {
+            "room_id": "1-4--8-230",
+            "room_name": "230",
+            "quantity": "60.80",
+            "update_time": "2025-02-20 18:32:19"
+        },
+        {
+            "room_id": "1-4--8-231",
+            "room_name": "231",
+            "quantity": "79.80",
+            "update_time": "2025-02-20 18:32:24"
+        },
+        {
+            "room_id": "1-4--8-232",
+            "room_name": "232",
+            "quantity": "65.20",
+            "update_time": "2025-02-20 18:32:29"
+        },
+        {
+            "room_id": "1-4--8-233",
+            "room_name": "233",
+            "quantity": "85.30",
+            "update_time": "2025-02-20 18:32:34"
+        },
+        {
+            "room_id": "1-4--8-234",
+            "room_name": "234",
+            "quantity": "112.0",
+            "update_time": "2025-02-20 18:32:39"
+        },
+        {
+            "room_id": "1-4--8-301",
+            "room_name": "301",
+            "quantity": "0.0",
+            "update_time": "2025-02-20 18:32:43"
+        },
+        {
+            "room_id": "1-4--8-302",
+            "room_name": "302",
+            "quantity": "93.40",
+            "update_time": "2025-02-20 18:32:48"
+        },
+        {
+            "room_id": "1-4--8-303",
+            "room_name": "303",
+            "quantity": "38.60",
+            "update_time": "2025-02-20 18:32:53"
+        },
+        {
+            "room_id": "1-4--8-304",
+            "room_name": "304",
+            "quantity": "55.90",
+            "update_time": "2025-02-20 18:32:58"
+        },
+        {
+            "room_id": "1-4--8-305",
+            "room_name": "305",
+            "quantity": "22.50",
+            "update_time": "2025-02-20 18:33:04"
+        },
+        {
+            "room_id": "1-4--8-306",
+            "room_name": "306",
+            "quantity": "28.90",
+            "update_time": "2025-02-20 18:33:09"
+        },
+        {
+            "room_id": "1-4--8-307",
+            "room_name": "307",
+            "quantity": "63.30",
+            "update_time": "2025-02-20 18:33:14"
+        },
+        {
+            "room_id": "1-4--8-308",
+            "room_name": "308",
+            "quantity": "49.80",
+            "update_time": "2025-02-20 18:33:19"
+        },
+        {
+            "room_id": "1-4--8-309",
+            "room_name": "309",
+            "quantity": "0.0",
+            "update_time": "2025-02-20 18:33:24"
+        },
+        {
+            "room_id": "1-4--8-310",
+            "room_name": "310",
+            "quantity": "70.70",
+            "update_time": "2025-02-20 18:33:28"
+        },
+        {
+            "room_id": "1-4--8-311",
+            "room_name": "311",
+            "quantity": "43.20",
+            "update_time": "2025-02-20 18:33:33"
+        },
+        {
+            "room_id": "1-4--8-312",
+            "room_name": "312",
+            "quantity": "20.40",
+            "update_time": "2025-02-20 18:33:39"
+        },
+        {
+            "room_id": "1-4--8-313",
+            "room_name": "313",
+            "quantity": "30.50",
+            "update_time": "2025-02-20 18:33:43"
+        },
+        {
+            "room_id": "1-4--8-314",
+            "room_name": "314",
+            "quantity": "53.40",
+            "update_time": "2025-02-20 18:33:48"
+        },
+        {
+            "room_id": "1-4--8-315",
+            "room_name": "315",
+            "quantity": "37.0",
+            "update_time": "2025-02-20 18:33:53"
+        },
+        {
+            "room_id": "1-4--8-316",
+            "room_name": "316",
+            "quantity": "58.10",
+            "update_time": "2025-02-20 18:33:58"
+        },
+        {
+            "room_id": "1-4--8-317",
+            "room_name": "317",
+            "quantity": "57.40",
+            "update_time": "2025-02-20 18:34:03"
+        },
+        {
+            "room_id": "1-4--8-318",
+            "room_name": "318",
+            "quantity": "16.10",
+            "update_time": "2025-02-20 18:34:09"
+        },
+        {
+            "room_id": "1-4--8-319",
+            "room_name": "319",
+            "quantity": "112.70",
+            "update_time": "2025-02-20 18:34:14"
+        },
+        {
+            "room_id": "1-4--8-320",
+            "room_name": "320",
+            "quantity": "332.90",
+            "update_time": "2025-02-20 18:34:19"
+        },
+        {
+            "room_id": "1-4--8-321",
+            "room_name": "321",
+            "quantity": "102.0",
+            "update_time": "2025-02-20 18:34:23"
+        },
+        {
+            "room_id": "1-4--8-322",
+            "room_name": "322",
+            "quantity": "5.0",
+            "update_time": "2025-02-20 18:34:28"
+        },
+        {
+            "room_id": "1-4--8-323",
+            "room_name": "323",
+            "quantity": "159.30",
+            "update_time": "2025-02-20 18:34:33"
+        },
+        {
+            "room_id": "1-4--8-324",
+            "room_name": "324",
+            "quantity": "2.80",
+            "update_time": "2025-02-20 18:34:39"
+        },
+        {
+            "room_id": "1-4--8-325",
+            "room_name": "325",
+            "quantity": "154.60",
+            "update_time": "2025-02-20 18:34:44"
+        },
+        {
+            "room_id": "1-4--8-326",
+            "room_name": "326",
+            "quantity": "63.0",
+            "update_time": "2025-02-20 18:34:49"
+        },
+        {
+            "room_id": "1-4--8-327",
+            "room_name": "327",
+            "quantity": "13.30",
+            "update_time": "2025-02-20 18:34:55"
+        },
+        {
+            "room_id": "1-4--8-328",
+            "room_name": "328",
+            "quantity": "6.20",
+            "update_time": "2025-02-20 18:34:59"
+        },
+        {
+            "room_id": "1-4--8-329",
+            "room_name": "329",
+            "quantity": "84.10",
+            "update_time": "2025-02-20 18:35:04"
+        },
+        {
+            "room_id": "1-4--8-330",
+            "room_name": "330",
+            "quantity": "129.30",
+            "update_time": "2025-02-20 18:35:10"
+        },
+        {
+            "room_id": "1-4--8-331",
+            "room_name": "331",
+            "quantity": "20.70",
+            "update_time": "2025-02-20 18:35:16"
+        },
+        {
+            "room_id": "1-4--8-332",
+            "room_name": "332",
+            "quantity": "0.0",
+            "update_time": "2025-02-20 18:35:20"
+        },
+        {
+            "room_id": "1-4--8-333",
+            "room_name": "333",
+            "quantity": "46.50",
+            "update_time": "2025-02-20 18:35:25"
+        },
+        {
+            "room_id": "1-4--8-334",
+            "room_name": "334",
+            "quantity": "60.0",
+            "update_time": "2025-02-20 18:35:31"
+        },
+        {
+            "room_id": "1-4--8-401",
+            "room_name": "401",
+            "quantity": "0.0",
+            "update_time": "2025-02-20 18:35:35"
+        },
+        {
+            "room_id": "1-4--8-402",
+            "room_name": "402",
+            "quantity": "81.20",
+            "update_time": "2025-02-20 18:35:40"
+        },
+        {
+            "room_id": "1-4--8-403",
+            "room_name": "403",
+            "quantity": "59.10",
+            "update_time": "2025-02-20 18:35:45"
+        },
+        {
+            "room_id": "1-4--8-404",
+            "room_name": "404",
+            "quantity": "47.60",
+            "update_time": "2025-02-20 18:35:50"
+        },
+        {
+            "room_id": "1-4--8-405",
+            "room_name": "405",
+            "quantity": "82.90",
+            "update_time": "2025-02-20 18:35:55"
+        },
+        {
+            "room_id": "1-4--8-406",
+            "room_name": "406",
+            "quantity": "63.10",
+            "update_time": "2025-02-20 18:36:00"
+        },
+        {
+            "room_id": "1-4--8-407",
+            "room_name": "407",
+            "quantity": "157.50",
+            "update_time": "2025-02-20 18:36:05"
+        },
+        {
+            "room_id": "1-4--8-408",
+            "room_name": "408",
+            "quantity": "54.10",
+            "update_time": "2025-02-20 18:36:10"
+        },
+        {
+            "room_id": "1-4--8-409",
+            "room_name": "409",
+            "quantity": "79.30",
+            "update_time": "2025-02-20 18:36:15"
+        },
+        {
+            "room_id": "1-4--8-410",
+            "room_name": "410",
+            "quantity": "76.40",
+            "update_time": "2025-02-20 18:36:19"
+        },
+        {
+            "room_id": "1-4--8-411",
+            "room_name": "411",
+            "quantity": "92.70",
+            "update_time": "2025-02-20 18:36:24"
+        },
+        {
+            "room_id": "1-4--8-412",
+            "room_name": "412",
+            "quantity": "96.0",
+            "update_time": "2025-02-20 18:36:29"
+        },
+        {
+            "room_id": "1-4--8-413",
+            "room_name": "413",
+            "quantity": "61.0",
+            "update_time": "2025-02-20 18:36:34"
+        },
+        {
+            "room_id": "1-4--8-414",
+            "room_name": "414",
+            "quantity": "104.80",
+            "update_time": "2025-02-20 18:36:39"
+        },
+        {
+            "room_id": "1-4--8-415",
+            "room_name": "415",
+            "quantity": "49.90",
+            "update_time": "2025-02-20 18:36:43"
+        },
+        {
+            "room_id": "1-4--8-416",
+            "room_name": "416",
+            "quantity": "55.10",
+            "update_time": "2025-02-20 18:36:48"
+        },
+        {
+            "room_id": "1-4--8-417",
+            "room_name": "417",
+            "quantity": "71.60",
+            "update_time": "2025-02-20 18:36:53"
+        },
+        {
+            "room_id": "1-4--8-418",
+            "room_name": "418",
+            "quantity": "60.80",
+            "update_time": "2025-02-20 18:36:58"
+        },
+        {
+            "room_id": "1-4--8-419",
+            "room_name": "419",
+            "quantity": "40.30",
+            "update_time": "2025-02-20 18:37:05"
+        },
+        {
+            "room_id": "1-4--8-420",
+            "room_name": "420",
+            "quantity": "57.80",
+            "update_time": "2025-02-20 18:37:10"
+        },
+        {
+            "room_id": "1-4--8-421",
+            "room_name": "421",
+            "quantity": "36.30",
+            "update_time": "2025-02-20 18:37:15"
+        },
+        {
+            "room_id": "1-4--8-422",
+            "room_name": "422",
+            "quantity": "4.70",
+            "update_time": "2025-02-20 18:37:19"
+        },
+        {
+            "room_id": "1-4--8-423",
+            "room_name": "423",
+            "quantity": "62.80",
+            "update_time": "2025-02-20 18:37:24"
+        },
+        {
+            "room_id": "1-4--8-424",
+            "room_name": "424",
+            "quantity": "0.0",
+            "update_time": "2025-02-20 18:37:29"
+        },
+        {
+            "room_id": "1-4--8-425",
+            "room_name": "425",
+            "quantity": "83.80",
+            "update_time": "2025-02-20 18:37:34"
+        },
+        {
+            "room_id": "1-4--8-426",
+            "room_name": "426",
+            "quantity": "104.40",
+            "update_time": "2025-02-20 18:37:39"
+        },
+        {
+            "room_id": "1-4--8-427",
+            "room_name": "427",
+            "quantity": "97.60",
+            "update_time": "2025-02-20 18:37:44"
+        },
+        {
+            "room_id": "1-4--8-428",
+            "room_name": "428",
+            "quantity": "53.90",
+            "update_time": "2025-02-20 18:37:49"
+        },
+        {
+            "room_id": "1-4--8-429",
+            "room_name": "429",
+            "quantity": "111.60",
+            "update_time": "2025-02-20 18:37:54"
+        },
+        {
+            "room_id": "1-4--8-430",
+            "room_name": "430",
+            "quantity": "57.90",
+            "update_time": "2025-02-20 18:37:59"
+        },
+        {
+            "room_id": "1-4--8-431",
+            "room_name": "431",
+            "quantity": "58.20",
+            "update_time": "2025-02-20 18:38:04"
+        },
+        {
+            "room_id": "1-4--8-432",
+            "room_name": "432",
+            "quantity": "27.0",
+            "update_time": "2025-02-20 18:38:09"
+        },
+        {
+            "room_id": "1-4--8-433",
+            "room_name": "433",
+            "quantity": "92.30",
+            "update_time": "2025-02-20 18:38:14"
+        },
+        {
+            "room_id": "1-4--8-434",
+            "room_name": "434",
+            "quantity": "27.90",
+            "update_time": "2025-02-20 18:38:19"
+        },
+        {
+            "room_id": "1-4--8-501",
+            "room_name": "501",
+            "quantity": "30.70",
+            "update_time": "2025-02-20 18:38:24"
+        },
+        {
+            "room_id": "1-4--8-502",
+            "room_name": "502",
+            "quantity": "38.90",
+            "update_time": "2025-02-20 18:38:29"
+        },
+        {
+            "room_id": "1-4--8-503",
+            "room_name": "503",
+            "quantity": "87.40",
+            "update_time": "2025-02-20 18:38:34"
+        },
+        {
+            "room_id": "1-4--8-504",
+            "room_name": "504",
+            "quantity": "57.40",
+            "update_time": "2025-02-20 18:38:38"
+        },
+        {
+            "room_id": "1-4--8-505",
+            "room_name": "505",
+            "quantity": "0.0",
+            "update_time": "2025-02-20 18:38:43"
+        },
+        {
+            "room_id": "1-4--8-506",
+            "room_name": "506",
+            "quantity": "101.80",
+            "update_time": "2025-02-20 18:38:48"
+        },
+        {
+            "room_id": "1-4--8-507",
+            "room_name": "507",
+            "quantity": "35.50",
+            "update_time": "2025-02-20 18:38:53"
+        },
+        {
+            "room_id": "1-4--8-508",
+            "room_name": "508",
+            "quantity": "35.30",
+            "update_time": "2025-02-20 18:38:58"
+        },
+        {
+            "room_id": "1-4--8-509",
+            "room_name": "509",
+            "quantity": "42.10",
+            "update_time": "2025-02-20 18:39:03"
+        },
+        {
+            "room_id": "1-4--8-510",
+            "room_name": "510",
+            "quantity": "76.60",
+            "update_time": "2025-02-20 18:39:07"
+        },
+        {
+            "room_id": "1-4--8-511",
+            "room_name": "511",
+            "quantity": "78.80",
+            "update_time": "2025-02-20 18:39:12"
+        },
+        {
+            "room_id": "1-4--8-512",
+            "room_name": "512",
+            "quantity": "3.70",
+            "update_time": "2025-02-20 18:39:17"
+        },
+        {
+            "room_id": "1-4--8-513",
+            "room_name": "513",
+            "quantity": "17.50",
+            "update_time": "2025-02-20 18:39:22"
+        },
+        {
+            "room_id": "1-4--8-514",
+            "room_name": "514",
+            "quantity": "97.50",
+            "update_time": "2025-02-20 18:39:27"
+        },
+        {
+            "room_id": "1-4--8-515",
+            "room_name": "515",
+            "quantity": "78.70",
+            "update_time": "2025-02-20 18:39:32"
+        },
+        {
+            "room_id": "1-4--8-516",
+            "room_name": "516",
+            "quantity": "31.10",
+            "update_time": "2025-02-20 18:39:37"
+        },
+        {
+            "room_id": "1-4--8-517",
+            "room_name": "517",
+            "quantity": "1.40",
+            "update_time": "2025-02-20 18:39:42"
+        },
+        {
+            "room_id": "1-4--8-518",
+            "room_name": "518",
+            "quantity": "48.90",
+            "update_time": "2025-02-20 18:39:47"
+        },
+        {
+            "room_id": "1-4--8-519",
+            "room_name": "519",
+            "quantity": "101.10",
+            "update_time": "2025-02-20 18:39:52"
+        },
+        {
+            "room_id": "1-4--8-520",
+            "room_name": "520",
+            "quantity": "95.0",
+            "update_time": "2025-02-20 18:39:57"
+        },
+        {
+            "room_id": "1-4--8-521",
+            "room_name": "521",
+            "quantity": "106.50",
+            "update_time": "2025-02-20 18:40:02"
+        },
+        {
+            "room_id": "1-4--8-522",
+            "room_name": "522",
+            "quantity": "13.60",
+            "update_time": "2025-02-20 18:40:07"
+        },
+        {
+            "room_id": "1-4--8-523",
+            "room_name": "523",
+            "quantity": "183.20",
+            "update_time": "2025-02-20 18:40:12"
+        },
+        {
+            "room_id": "1-4--8-524",
+            "room_name": "524",
+            "quantity": "37.80",
+            "update_time": "2025-02-20 18:40:17"
+        },
+        {
+            "room_id": "1-4--8-525",
+            "room_name": "525",
+            "quantity": "293.80",
+            "update_time": "2025-02-20 18:40:21"
+        },
+        {
+            "room_id": "1-4--8-526",
+            "room_name": "526",
+            "quantity": "75.50",
+            "update_time": "2025-02-20 18:40:26"
+        },
+        {
+            "room_id": "1-4--8-527",
+            "room_name": "527",
+            "quantity": "2.30",
+            "update_time": "2025-02-20 18:40:31"
+        },
+        {
+            "room_id": "1-4--8-528",
+            "room_name": "528",
+            "quantity": "0.0",
+            "update_time": "2025-02-20 18:40:36"
+        },
+        {
+            "room_id": "1-4--8-529",
+            "room_name": "529",
+            "quantity": "52.40",
+            "update_time": "2025-02-20 18:40:41"
+        },
+        {
+            "room_id": "1-4--8-530",
+            "room_name": "530",
+            "quantity": "13.30",
+            "update_time": "2025-02-20 18:40:46"
+        },
+        {
+            "room_id": "1-4--8-531",
+            "room_name": "531",
+            "quantity": "53.90",
+            "update_time": "2025-02-20 18:40:51"
+        },
+        {
+            "room_id": "1-4--8-532",
+            "room_name": "532",
+            "quantity": "18.20",
+            "update_time": "2025-02-20 18:40:56"
+        },
+        {
+            "room_id": "1-4--8-533",
+            "room_name": "533",
+            "quantity": "62.80",
+            "update_time": "2025-02-20 18:41:01"
+        },
+        {
+            "room_id": "1-4--8-534",
+            "room_name": "534",
+            "quantity": "34.70",
+            "update_time": "2025-02-20 18:41:05"
+        },
+        {
+            "room_id": "1-4--8-601",
+            "room_name": "601",
+            "quantity": "74.70",
+            "update_time": "2025-02-20 18:41:10"
+        },
+        {
+            "room_id": "1-4--8-602",
+            "room_name": "602",
+            "quantity": "69.50",
+            "update_time": "2025-02-20 18:41:15"
+        },
+        {
+            "room_id": "1-4--8-603",
+            "room_name": "603",
+            "quantity": "61.80",
+            "update_time": "2025-02-20 18:41:20"
+        },
+        {
+            "room_id": "1-4--8-604",
+            "room_name": "604",
+            "quantity": "0.0",
+            "update_time": "2025-02-20 18:41:25"
+        },
+        {
+            "room_id": "1-4--8-605",
+            "room_name": "605",
+            "quantity": "9.01",
+            "update_time": "2025-02-20 18:41:30"
+        },
+        {
+            "room_id": "1-4--8-606",
+            "room_name": "606",
+            "quantity": "41.27",
+            "update_time": "2025-02-20 18:41:34"
+        },
+        {
+            "room_id": "1-4--8-607",
+            "room_name": "607",
+            "quantity": "62.62",
+            "update_time": "2025-02-20 18:41:39"
+        },
+        {
+            "room_id": "1-4--8-608",
+            "room_name": "608",
+            "quantity": "65.32",
+            "update_time": "2025-02-20 18:41:44"
+        },
+        {
+            "room_id": "1-4--8-609",
+            "room_name": "609",
+            "quantity": "136.80",
+            "update_time": "2025-02-20 18:41:49"
+        },
+        {
+            "room_id": "1-4--8-610",
+            "room_name": "610",
+            "quantity": "0.0",
+            "update_time": "2025-02-20 18:41:54"
+        },
+        {
+            "room_id": "1-4--8-611",
+            "room_name": "611",
+            "quantity": "36.60",
+            "update_time": "2025-02-20 18:41:59"
+        },
+        {
+            "room_id": "1-4--8-612",
+            "room_name": "612",
+            "quantity": "0.0",
+            "update_time": "2025-02-20 18:42:03"
+        },
+        {
+            "room_id": "1-4--8-613",
+            "room_name": "613",
+            "quantity": "9.0",
+            "update_time": "2025-02-20 18:42:08"
+        },
+        {
+            "room_id": "1-4--8-614",
+            "room_name": "614",
+            "quantity": "52.40",
+            "update_time": "2025-02-20 18:42:13"
+        },
+        {
+            "room_id": "1-4--8-615",
+            "room_name": "615",
+            "quantity": "82.50",
+            "update_time": "2025-02-20 18:42:18"
+        },
+        {
+            "room_id": "1-4--8-616",
+            "room_name": "616",
+            "quantity": "99.40",
+            "update_time": "2025-02-20 18:42:23"
+        },
+        {
+            "room_id": "1-4--8-617",
+            "room_name": "617",
+            "quantity": "57.70",
+            "update_time": "2025-02-20 18:42:28"
+        },
+        {
+            "room_id": "1-4--8-618",
+            "room_name": "618",
+            "quantity": "5.70",
+            "update_time": "2025-02-20 18:42:33"
+        },
+        {
+            "room_id": "1-4--8-619",
+            "room_name": "619",
+            "quantity": "77.0",
+            "update_time": "2025-02-20 18:42:38"
+        },
+        {
+            "room_id": "1-4--8-620",
+            "room_name": "620",
+            "quantity": "125.40",
+            "update_time": "2025-02-20 18:42:42"
+        },
+        {
+            "room_id": "1-4--8-621",
+            "room_name": "621",
+            "quantity": "30.50",
+            "update_time": "2025-02-20 18:42:47"
+        },
+        {
+            "room_id": "1-4--8-622",
+            "room_name": "622",
+            "quantity": "78.70",
+            "update_time": "2025-02-20 18:42:52"
+        },
+        {
+            "room_id": "1-4--8-623",
+            "room_name": "623",
+            "quantity": "39.50",
+            "update_time": "2025-02-20 18:42:58"
+        },
+        {
+            "room_id": "1-4--8-624",
+            "room_name": "624",
+            "quantity": "66.0",
+            "update_time": "2025-02-20 18:43:03"
+        },
+        {
+            "room_id": "1-4--8-625",
+            "room_name": "625",
+            "quantity": "159.90",
+            "update_time": "2025-02-20 18:43:08"
+        },
+        {
+            "room_id": "1-4--8-626",
+            "room_name": "626",
+            "quantity": "8.0",
+            "update_time": "2025-02-20 18:43:12"
+        },
+        {
+            "room_id": "1-4--8-627",
+            "room_name": "627",
+            "quantity": "44.60",
+            "update_time": "2025-02-20 18:43:17"
+        },
+        {
+            "room_id": "1-4--8-628",
+            "room_name": "628",
+            "quantity": "0.30",
+            "update_time": "2025-02-20 18:43:23"
+        },
+        {
+            "room_id": "1-4--8-629",
+            "room_name": "629",
+            "quantity": "90.60",
+            "update_time": "2025-02-20 18:43:28"
+        },
+        {
+            "room_id": "1-4--8-630",
+            "room_name": "630",
+            "quantity": "17.60",
+            "update_time": "2025-02-20 18:43:33"
+        },
+        {
+            "room_id": "1-4--8-631",
+            "room_name": "631",
+            "quantity": "24.70",
+            "update_time": "2025-02-20 18:43:38"
+        },
+        {
+            "room_id": "1-4--8-632",
+            "room_name": "632",
+            "quantity": "0.0",
+            "update_time": "2025-02-20 18:43:43"
+        },
+        {
+            "room_id": "1-4--8-633",
+            "room_name": "633",
+            "quantity": "11.30",
+            "update_time": "2025-02-20 18:43:48"
+        },
+        {
+            "room_id": "1-4--8-634",
+            "room_name": "634",
+            "quantity": "0.0",
+            "update_time": "2025-02-20 18:43:53"
+        }
+    ]
+}

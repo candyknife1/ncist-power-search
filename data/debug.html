@@ -1,0 +1,355 @@
+
+
+
+
+<!-- 使用JSTL标签 （可以和自定义标签配合使用） -->
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="https://h5cloud.17wanxiao.com:18443/CloudPayment/"/>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/cloudpay/common.css?v=1.0"/>
+    
+    
+    
+        <link rel="stylesheet" href="css/cloudpay/style_jinmifeng.css?v=7.92"/>
+        <link rel="stylesheet" href="css/cloudpay/style_new_flow.css?v=1.0"/>
+    
+    
+    
+
+    <link rel="stylesheet" href="css/cloudpay/dropload.css"/>
+    <title>华北科技学院</title>
+</head>
+<body class="new-bill-type-body">
+<div class="views new-bill-type-div">
+    <header>
+
+        
+            
+            
+            
+            
+                
+                
+                
+                
+                <a href="https://cjwt.17wanxiao.com/help/?code=GCEU597U"
+                   class="left">
+                    <img src="img/cloudpay/question.png" alt="常见问题" style="width:0.42rem;height:0.42rem">
+                </a>
+            
+        
+
+
+        <h3>云缴费</h3>
+        <!-- <a href="javascript:;" class="right img"><img src="img/cloudpay/more.png" alt="" class="more"></a> -->
+        <a href="bill/record.do" class="right font">账单</a>
+    </header>
+    <div class="page-content payType">
+        <div class="table">
+            <div class="tabs clearfix">
+                <div class="wait fl focus">待缴账单</div>
+
+                
+                    
+                    
+                        <div id="selfBill" class="self fr">预付费</div>
+                    
+                    
+                    
+                
+            </div>
+        </div>
+        <div class="tab">
+
+            <!-- 缴费用户信息 -->
+            <div class="tab1 tabs billType-dropload list-block">
+                <div class="payself2">
+                    <div class="title">
+                        <ul>
+                            <li class=" item-content">
+                                
+                                
+                                    
+                                    
+                                        <div class="item-media"><i class="icon icon-mf-jmf"></i></div>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                
+                                <div class="item-inner people">
+                                    <div class="item-title">华北科技学院</div>
+                                    <div class="item-after">
+                                        <a href="user/detail.do">
+                                            李智文
+                                            
+                                                
+                                                    (****4116)
+                                                
+                                                
+                                            
+                                        </a>
+                                    </div>
+                                    <!-- 客户（学校）编号(<宿主端>APP) -->
+                                    <input type="hidden" id="hostCustomerCode" name="hostCustomerCode"
+                                           value="104"/>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- 遍历 payOrderList -->
+                <div class="bill">
+                    <!-- 不是校外人员缴费才显示应缴账单 -->
+                    
+                        <!-- 从Controller拿到List以后，JSP页面判断并展示 -->
+                        <div class="type list list1 newflow">
+                            <div class="billType">
+                                <label class="label">
+                                    <input class="radio" type="checkbox" name="all">
+                                    <span class="checkbox radioInput"></span>应缴账单
+                                </label>
+                            </div>
+
+                            <!-- 如果是【应缴账单】(收费类别) -->
+                            <ul>
+                                
+                                    
+
+                                    
+                                        <li class="one clearfix local"><p>暂无应缴账单</p></li>
+                                    
+
+                                
+                            </ul>
+
+                        </div>
+                    
+                    <div class="type list list2 newflow">
+                        <div class="billType">
+                            <label class="label">
+                                <input class="radio" type="checkbox" name="all">
+                                <span class="checkbox radioInput"></span>自选账单
+                                <span class="fr" style="color: #bbb;font-size: 0.23rem;padding-top: 0.02rem">&nbsp;&nbsp;&nbsp;账单24小时会自动关闭,请尽快缴费哦</span>
+                            </label>
+                        </div>
+
+                        <ul>
+                            
+                                
+                                
+                                    <li class="one clearfix local"><p>暂无自选账单</p></li>
+                                
+
+                            
+
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="type list list2">
+                    
+
+                </div>
+                <div class="button2 clearfix" style="line-height: 1">
+                    <label class="label fl" style="line-height: 1.2rem">
+                        <input class="radio" type="checkbox" name="checkbox1" id="alls">
+                        <span class="checkbox radioInput"></span>全选
+                    </label>
+                    <p class="all" id="sum_amt">
+                        <span id="OrderSumAmt" class="num"> 0.00 </span>
+                        <span class="arrow_icon"></span>
+                    </p>
+                    <a href="javascript:;" class="fr js-pay">支付</a>
+                    <!-- 缴费用户<三方认证用户>(证件号) -->
+                    <input type="hidden" id="hidPayUserIdNum" name="payUserIdNum"
+                           value="202207034116"/>
+                    <!-- 客户（学校）编号(<宿主端>APP) -->
+                    <input type="hidden" id="hidHostCustomerCode" name="hostCustomerCode"
+                           value="104"/>
+
+                </div>
+
+            </div>
+
+            <!-- 自选账单 -->
+            <div class="tab2 tabs">
+
+                
+                <div class="ser">
+                    <i class="icon"></i>
+                    <input id="searchSelfPayProjectName" type="text" placeholder="输入关键字搜索"/>
+                </div>
+
+                
+                
+
+                
+                
+                <div class="tab1 tabs">
+                    <div id="selfPayProjectList" class="listed newflow">
+                        <ul>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="pop_main">
+    <div class="pop_con">
+        <div class="pop_title">
+            <span class="title"><b>金额明细</b></span>
+            <span class="close_icon">x</span>
+        </div>
+        <div class="pop_detail">
+
+            <div class="list">
+                <ul id="detail">
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="mask"></div>
+</div>
+
+
+<input type="hidden" id="dataSize" value="0">
+
+<input type="hidden" name="pluginType" value="0"/>
+
+<input type="hidden" id="businessErrorMsg" value=""/>
+
+<input type="hidden" name="versioncode" value="10583101"/>
+
+<input type="hidden" name="cashDeskType" value="NULL"/>
+
+<input type="hidden" name="flowType" value="0"/>
+
+<input type="hidden" id="campusFlag" value=""/>
+
+<script id="selfPayProject-Tpl" type="text/template7">
+    {{#each this}}
+    <li class="one pay onenew">
+        <a href="bill/selectPayProject.do?txcode={{txcode}}&interurl={{interurl}}&payProId={{id}}&amtflag={{amtflag}}&payamt={{payamt}}&payproname={{payproname}}&img={{img}}&subPayProId={{subid}}">
+            <img src="{{img}}" alt="">
+            <p class="name selfPayProjectName">{{payproname}}</p> <i class="icon arrow"></i>
+        </a>
+        {{#if discountsText}}
+        {{#eq discountsText.discountsInfoFlag 'true'}}
+        <div onclick="discountsMessageByElement(this)" class="discounts">
+            <div class="discountsLabel">
+                {{#each discountsText.projectDiscountsText}}
+                <div>{{label}}</div>
+                {{/each}}
+            </div><i class="icon arrow"></i>
+            <input type="hidden" name="projectDiscountsText" value='{{js "JSON.stringify(this.discountsText.projectDiscountsText)"}}'/>
+        </div>
+        {{else}}
+        {{eq}}
+        {{else}}
+        {{/if}}
+    </li>
+    {{/each}}
+</script>
+<div id="discounts">
+    <div class="mask"></div>
+    <div class="body">
+        <div class="title">
+            <div class="word">缴费活动</div>
+            <div class="close" onclick="close()"></div>
+        </div>
+        <ul style=""></ul>
+    </div>
+</div>
+
+<script id="noSelfPayProject-Tpl" type="text/template7">
+    <li class="one pay">
+        <a href="javascript:void(0)">
+            <p class="name"> {{msg}}</p>
+        </a>
+    </li>
+</script>
+
+<script id="campus_selfPayProject-Tpl" type="text/template7">
+    {{#each this}}
+    <li class="one pay onenew" style="overflow: hidden">
+        <a href="javascript:void(0)" class="{{campusCode}}" onclick="clickCampus(this)">
+            <img src="https://cloud.17wanxiao.com/CapecYunPay/images/project/img-nav_22.png" alt="">
+            <p class="name selfPayProjectName" {{campusColor}}><b>{{campusName}}</b></p> <i class="icon arrow"></i>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="js/cloudpay/zepto-template-iscroll.min.js"></script>
+<script type="text/javascript" src="js/cloudpay/common.js?v=7.1"></script>
+
+<script>
+    if (WX.android()) {
+        $("#open_newcap_ios").hide();
+    }
+</script>
+
+<script type="text/javascript" src="js/framework/framework7.min.js"></script>
+
+<script type="text/javascript" src="js/cloudpay/wanxiao-js-api.js"></script>
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="//wapnew.17wanxiao.com/WapCashDesk/e-pay/cap-epay-sdk-min.js"></script>
+<script type="text/javascript" src="js/cloudpay/touch.js"></script>
+<script type="text/javascript" src="js/cloudpay/dropload.js"></script>
+<script type="text/javascript" src="js/cloudpay/createOrder.js?v=7.1"></script>
+<script type="text/javascript" src="js/cloudpay/selfPayProject.js?v=7.1"></script>
+<script type="text/javascript" src="js/cloudpay/payWays.js?v=7.1"></script>
+</body>
+</html>
+
+
+<script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript"/>
+<script type="text/javascript">
+    try {
+        wx.hideOptionMenu();
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+            WeixinJSBridge.call('hideOptionMenu');
+        });
+    } catch (e) {
+    }
+
+</script>
