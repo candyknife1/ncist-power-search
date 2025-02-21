@@ -17,7 +17,7 @@ from api import 完美校园
 
 app = Flask(__name__, static_folder='web', static_url_path='')
 CORS(app)
-api = 完美校园(phone_num='13625696883',password='12346789vb',device_id='5745286925431029')
+api = 完美校园(phone_num='',password='',device_id='')
 
 class server:
 
