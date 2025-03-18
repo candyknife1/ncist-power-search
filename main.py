@@ -1,4 +1,4 @@
-from flask import Flask, render_template,request,jsonify
+from flask import Flask, render_template, request, jsonify
 from pyecharts.charts import Bar, Scatter,Pie
 from pyecharts import options as opts
 from pyecharts.globals import CurrentConfig, NotebookType
@@ -10,14 +10,17 @@ from pathlib import Path
 import glob
 import os
 from flask_cors import CORS
-
-
+from threading import Thread, Lock
 
 from api import 完美校园
 
 app = Flask(__name__, static_folder='web', static_url_path='')
 CORS(app)
 api = 完美校园(phone_num='13625696883',password='12346789vb',device_id='5745286925431029')
+
+# 全局变量
+lock = Lock()
+page = 0
 
 class server:
 
@@ -445,13 +448,19 @@ class server:
                                     continue
                                     
                                 if msg.get('returncode') == '100':
+                                    quantity = float(msg['quantity'])
+                                    # 检查异常电量
+                                    if quantity < 0 or quantity > 300:
+                                        print(f"    [异常] {room['name']} 房间电量异常: {quantity}度，已置为0")
+                                        quantity = 0  # 将异常值设为0
+                                    
                                     power_data.append({
                                         'room_id': room_id,
                                         'room_name': room['name'],
-                                        'quantity': msg['quantity'],
+                                        'quantity': str(quantity),  # 转回字符串保持格式一致
                                         'update_time': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
                                     })
-                                    print(f"    [成功] {room['name']} 房间电量: {msg['quantity']} {msg['quantityunit']}")
+                                    print(f"    [成功] {room['name']} 房间电量: {quantity} {msg['quantityunit']}")
                                 else:
                                     print(f"    [错误] {room['name']} 房间查询失败: {msg.get('returnmsg', '未知错误')}")
                                 
@@ -580,6 +589,303 @@ class server:
             print(f"获取图表数据时出错: {e}")
             return jsonify({'error': str(e)}), 500
 
+    def update_all_buildings_power_data(self):
+        """
+        更新所有楼栋的电量数据（除了一号公寓和七号公寓）
+        每7天更新一次
+        """
+        try:
+            # 创建数据目录（如果不存在）
+            os.makedirs('data', exist_ok=True)
+            
+            # 检查上次更新时间
+            last_update = None
+            if os.path.exists('data/all_buildings_last_update.json'):
+                with open('data/all_buildings_last_update.json', 'r') as f:
+                    last_update = datetime.fromisoformat(json.load(f)['time'])
+            
+            current_time = datetime.now()
+            
+            # 如果是首次更新或距离上次更新超过7天
+            if not last_update or (current_time - last_update).days >= 7:
+                print("开始更新所有楼栋电量数据...")
+                
+                # 获取所有楼栋数据
+                all_buildings = []
+                excluded_buildings = {'一号公寓空调', '七号公寓空调'}
+                
+                # 读取所有房间数据
+                for file_path in glob.glob('data/building_*.json'):
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        building_data = json.load(f)
+                        building_name = building_data['name']
+                        if building_name not in excluded_buildings:
+                            all_buildings.append({
+                                'buildid': building_data['buildid'],
+                                'name': building_name,
+                                'rooms': building_data['rooms']
+                            })
+                
+                if not all_buildings:
+                    print("未找到需要更新的楼栋")
+                    return
+                
+                update_success = True
+                
+                # 更新每栋楼的数据
+                for building in all_buildings:
+                    try:
+                        print(f"正在更新 {building['name']} 的电量数据...")
+                        print(f"房间数量: {len(building['rooms'])}")
+                        
+                        # 存储该楼的电量数据
+                        power_data = []
+                        
+                        # 直接查询每个房间的电量
+                        total_rooms = len(building['rooms'])
+                        for index, room in enumerate(building['rooms'], 1):
+                            try:
+                                room_id = room['id']
+                                print(f"[{index}/{total_rooms}] 正在查询 {room['name']} 房间...")
+                                res, msg = api.get_power_info(room_id)
+                                if not res:
+                                    print(f"    [失败] 获取房间 {room_id} 电量失败")
+                                    continue
+                                    
+                                if msg.get('returncode') == '100':
+                                    quantity = float(msg['quantity'])
+                                    # 检查异常电量
+                                    if quantity < 0 or quantity > 300:
+                                        print(f"    [异常] {room['name']} 房间电量异常: {quantity}度，已置为0")
+                                        quantity = 0  # 将异常值设为0
+                                    
+                                    power_data.append({
+                                        'room_id': room_id,
+                                        'room_name': room['name'],
+                                        'quantity': str(quantity),  # 转回字符串保持格式一致
+                                        'update_time': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                                    })
+                                    print(f"    [成功] {room['name']} 房间电量: {quantity} {msg['quantityunit']}")
+                                else:
+                                    print(f"    [错误] {room['name']} 房间查询失败: {msg.get('returnmsg', '未知错误')}")
+                                
+                                time.sleep(4)  # 避免请求过快
+                            except Exception as e:
+                                print(f"    [错误] 查询房间 {room_id} 时出错: {e}")
+                        
+                        # 保存电量数据到文件
+                        if power_data:
+                            power_file = f'data/power_{building["buildid"]}.json'
+                            try:
+                                with open(power_file, 'w', encoding='utf-8') as f:
+                                    json.dump({
+                                        'building_name': building['name'],
+                                        'building_id': building['buildid'],
+                                        'update_time': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                                        'rooms': power_data
+                                    }, f, indent=4, ensure_ascii=False)
+                                print(f"已保存 {building['name']} 的电量数据")
+                            except Exception as e:
+                                print(f"保存 {building['name']} 电量数据失败: {e}")
+                                update_success = False
+                        else:
+                            print(f"未获取到 {building['name']} 的有效电量数据")
+                            update_success = False
+                        
+                        print(f"完成更新 {building['name']} 的电量数据")
+                        
+                        # 每栋楼更新完成后，立即更新该楼的更新时间
+                        with open(f'data/building_update_{building["buildid"]}.json', 'w') as f:
+                            json.dump({'time': datetime.now().isoformat()}, f)
+                        
+                    except Exception as e:
+                        print(f"更新 {building['name']} 数据失败: {e}")
+                        update_success = False
+                
+                # 只有在所有数据都成功更新后才保存总的更新时间
+                if update_success:
+                    with open('data/all_buildings_last_update.json', 'w') as f:
+                        json.dump({'time': current_time.isoformat()}, f)
+                    print("所有楼栋电量数据更新完成，已记录更新时间")
+                else:
+                    print("部分数据更新失败，不记录总的更新时间")
+                    
+            else:
+                print(f"距离上次更新未满7天，跳过更新（还需等待{7-(current_time-last_update).days}天）")
+            
+        except Exception as e:
+            print(f"更新所有楼栋数据时出错: {e}")
+    
+    @app.route('/get_building_power', methods=['GET'])
+    def get_building_power():
+        """获取指定楼栋的电量数据"""
+        try:
+            building_name = request.args.get('building')
+            
+            if not building_name:
+                return jsonify({'error': '请提供楼栋名称'}), 400
+            
+            # 查找对应的楼栋ID
+            building_id = None
+            for file_path in glob.glob('data/building_*.json'):
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    building_data = json.load(f)
+                    if building_data['name'] == building_name:
+                        building_id = building_data['buildid']
+                        break
+            
+            if not building_id:
+                return jsonify({'error': '未找到该楼栋信息'}), 404
+            
+            # 检查电量数据文件是否存在
+            power_file = f'data/power_{building_id}.json'
+            if not os.path.exists(power_file):
+                return jsonify({'error': '该楼栋电量数据未更新'}), 404
+            
+            # 读取电量数据
+            with open(power_file, 'r', encoding='utf-8') as f:
+                power_data = json.load(f)
+            
+            # 返回处理后的数据
+            return jsonify({
+                'building_name': power_data['building_name'],
+                'update_time': power_data['update_time'],
+                'rooms': power_data['rooms']
+            })
+            
+        except Exception as e:
+            print(f"获取楼栋电量数据时出错: {e}")
+            return jsonify({'error': str(e)}), 500
+
+def start_update_all_buildings_thread():
+    """启动更新所有楼栋电量数据的线程"""
+    def update_thread():
+        print("启动更新所有楼栋电量数据的线程")
+        time.sleep(10)  # 等待10秒，确保服务器已完全启动
+        
+        try:
+            # 创建数据目录（如果不存在）
+            os.makedirs('data', exist_ok=True)
+            
+            # 检查上次更新时间
+            last_update = None
+            if os.path.exists('data/all_buildings_last_update.json'):
+                with open('data/all_buildings_last_update.json', 'r') as f:
+                    last_update = datetime.fromisoformat(json.load(f)['time'])
+            
+            current_time = datetime.now()
+            
+            # 如果是首次更新或距离上次更新超过7天
+            if not last_update or (current_time - last_update).days >= 7:
+                print("开始更新所有楼栋电量数据...")
+                
+                # 获取所有楼栋数据
+                all_buildings = []
+                excluded_buildings = {'一号公寓空调', '七号公寓空调'}
+                
+                # 读取所有房间数据
+                for file_path in glob.glob('data/building_*.json'):
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        building_data = json.load(f)
+                        building_name = building_data['name']
+                        if building_name not in excluded_buildings:
+                            all_buildings.append({
+                                'buildid': building_data['buildid'],
+                                'name': building_name,
+                                'rooms': building_data['rooms']
+                            })
+                
+                if not all_buildings:
+                    print("未找到需要更新的楼栋")
+                    return
+                
+                update_success = True
+                
+                # 更新每栋楼的数据
+                for building in all_buildings:
+                    try:
+                        print(f"正在更新 {building['name']} 的电量数据...")
+                        print(f"房间数量: {len(building['rooms'])}")
+                        
+                        # 存储该楼的电量数据
+                        power_data = []
+                        
+                        # 直接查询每个房间的电量
+                        total_rooms = len(building['rooms'])
+                        for index, room in enumerate(building['rooms'], 1):
+                            try:
+                                room_id = room['id']
+                                print(f"[{index}/{total_rooms}] 正在查询 {room['name']} 房间...")
+                                res, msg = api.get_power_info(room_id)
+                                if not res:
+                                    print(f"    [失败] 获取房间 {room_id} 电量失败")
+                                    continue
+                                    
+                                if msg.get('returncode') == '100':
+                                    quantity = float(msg['quantity'])
+                                    # 检查异常电量
+                                    if quantity < 0 or quantity > 300:
+                                        print(f"    [异常] {room['name']} 房间电量异常: {quantity}度，已置为0")
+                                        quantity = 0  # 将异常值设为0
+                                    
+                                    power_data.append({
+                                        'room_id': room_id,
+                                        'room_name': room['name'],
+                                        'quantity': str(quantity),  # 转回字符串保持格式一致
+                                        'update_time': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                                    })
+                                    print(f"    [成功] {room['name']} 房间电量: {quantity} {msg['quantityunit']}")
+                                else:
+                                    print(f"    [错误] {room['name']} 房间查询失败: {msg.get('returnmsg', '未知错误')}")
+                                
+                                time.sleep(4)  # 避免请求过快
+                            except Exception as e:
+                                print(f"    [错误] 查询房间 {room_id} 时出错: {e}")
+                        
+                        # 保存电量数据到文件
+                        if power_data:
+                            power_file = f'data/power_{building["buildid"]}.json'
+                            try:
+                                with open(power_file, 'w', encoding='utf-8') as f:
+                                    json.dump({
+                                        'building_name': building['name'],
+                                        'building_id': building['buildid'],
+                                        'update_time': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                                        'rooms': power_data
+                                    }, f, indent=4, ensure_ascii=False)
+                                print(f"已保存 {building['name']} 的电量数据")
+                            except Exception as e:
+                                print(f"保存 {building['name']} 电量数据失败: {e}")
+                                update_success = False
+                        else:
+                            print(f"未获取到 {building['name']} 的有效电量数据")
+                            update_success = False
+                        
+                        print(f"完成更新 {building['name']} 的电量数据")
+                        
+                        # 每栋楼更新完成后，立即更新该楼的更新时间
+                        with open(f'data/building_update_{building["buildid"]}.json', 'w') as f:
+                            json.dump({'time': datetime.now().isoformat()}, f)
+                        
+                    except Exception as e:
+                        print(f"更新 {building['name']} 数据失败: {e}")
+                        update_success = False
+                
+                # 只有在所有数据都成功更新后才保存总的更新时间
+                if update_success:
+                    with open('data/all_buildings_last_update.json', 'w') as f:
+                        json.dump({'time': current_time.isoformat()}, f)
+                    print("所有楼栋电量数据更新完成，已记录更新时间")
+                else:
+                    print("部分数据更新失败，不记录总的更新时间")
+                    
+        except Exception as e:
+            print(f"更新所有楼栋数据时出错: {e}")
+    
+    thread = Thread(target=update_thread)
+    thread.daemon = True  # 设置为守护线程，主线程结束时会自动结束
+    thread.start()
+
 if __name__ == '__main__':
     # 初始化
     api.init()
@@ -588,6 +894,10 @@ if __name__ == '__main__':
     # 初始化建筑数据（如果需要）
     web.init_building_data()
     web.render()  # 绘制图表
+    
+    # 启动更新所有楼栋电量数据的线程
+    start_update_all_buildings_thread()
+    
     # 启动web服务
     app.run(host='0.0.0.0', port=5050)
 
